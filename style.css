@@ -1,0 +1,399 @@
+:root {
+  --main-color: rgb(59, 28, 78);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  /* font-family: "centaur"; */
+}
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  font-weight: 500;
+}
+
+body::after {
+  content: "";
+  background-image: url(./back-img.JPG);
+  background-size: 100vw 95vh;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-origin: 0px;
+  background-attachment: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* Header and Nav stylings are here */
+header {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav {
+  background-color: rgb(59, 28, 78);
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+  padding: 8px 25px 0px 25px;
+  width: 100%;
+  display: block;
+}
+.n-span {
+  color: white;
+  display: inline;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  flex: 1;
+  font-size: 1.8em;
+}
+
+nav > ul {
+  padding-right: 3em;
+  text-align: right;
+}
+
+nav > ul > li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: right;
+  color: white;
+  /* align-items: flex-end; */
+}
+li > a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 12px 3px;
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  margin-left: 0.45em;
+  width: 85%;
+  height: 0.14em;
+  background-color: rgb(248, 248, 248);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+li a::after {
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+li a:hover::after {
+  /* opacity: 1; */
+  transform: scale(1);
+  /* transform-origin: center; */
+}
+
+.flex-container {
+  display: flex;
+}
+
+/* Main page stylings are here */
+.main {
+  margin: 30px 0 100px;
+}
+
+.c-main {
+  padding-top: 7em;
+  text-align: center;
+}
+
+.c-main form {
+  text-align: center;
+}
+
+#exposition {
+  padding: 10px 45px 5px 2px;
+}
+
+p > strong {
+  font-size: 1.5em;
+}
+
+span {
+  font-size: 1.5em;
+  display: inline-block;
+  margin-bottom: 0.3em;
+}
+
+.write-ups {
+  flex-direction: column;
+  flex: 1;
+  margin: 50px 10px 10px 60px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2em;
+  box-sizing: border-box;
+  width: 40%;
+}
+
+.others {
+  /* background-color: green; */
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding: 0;
+  margin: 1.5em 5px 5px;
+}
+.img-1 {
+  border: 5px solid black;
+  border-radius: 100%;
+  width: 28em;
+  height: 28em;
+}
+
+.img-cont {
+  margin: 35px 50px 10px 50px;
+  width: 28em;
+  height: 28em;
+  /* width: 30%; */
+  text-align: center;
+}
+
+.txt-head {
+  font-family: californian fb;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+  margin: 3px 2em 5px 0;
+  text-align: left;
+  padding-left: 0.7em;
+}
+
+.txt-cont {
+  box-sizing: border-box;
+  width: 30%;
+  height: 70%;
+  margin: 5px 10px 7px 0px;
+}
+
+.txt-cont > ul {
+  list-style-type: none;
+  padding: 0em 1em 0 0;
+}
+
+.txt-cont > ul > li {
+  font-size: 0.85em;
+  text-align: left;
+}
+
+/* Image and Fig styings are here */
+figcaption {
+  margin-top: 13px;
+  font-family: "califronian FB";
+  font-size: 2.5em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.lil {
+  font-size: 0.6em;
+  padding-top: 0.5em;
+  font-family: "centaur";
+}
+
+figcaption::after {
+  content: "";
+  position: absolute;
+  /* bottom: 0; */
+  /* right: 0; */
+  box-sizing: border-box;
+  margin-bottom: 0.6em;
+  margin-left: -11em;
+  width: 11em;
+  height: 0.12em;
+  background-color: rgb(72, 5, 5);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+  text-align: right;
+}
+
+figure figcaption::after {
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+figure figcaption:hover::after {
+  /* opacity: 1; */
+  transform: scale(1);
+  /* transform-origin: center; */
+}
+
+/* Button stylings are here */
+.btn {
+  border-radius: 70px;
+  border: 3px outset white;
+  padding: 0.5em 2.8em 0.7em;
+  font-size: 1.5em;
+  font-family: "Segoe UI";
+  font-weight: 600;
+  color: black;
+  background-image: linear-gradient(white, rgb(104, 84, 128));
+}
+
+.btn:hover {
+  background-image: linear-gradient(rgb(251, 244, 244), rgb(92, 44, 127));
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  /* bottom: 0; */
+  /* right: 0; */
+  box-sizing: border-box;
+  margin-top: 1.3em;
+  margin-left: -6.2em;
+  width: 6.8em;
+  height: 0.13em;
+  background-color: rgb(105, 17, 17);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+  text-align: right;
+}
+
+.btn::after {
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.btn:hover::after {
+  /* opacity: 1; */
+  transform: scale(1);
+  /* transform-origin: center; */
+}
+
+#r-btn::after {
+  margin-top: 1.3em;
+  margin-left: -4.2em;
+  width: 5em;
+  height: 0.102em;
+}
+
+#lp-btn::after {
+  margin-top: 1.3em;
+  margin-left: -3.7em;
+  width: 4.2em;
+  height: 0.1em;
+}
+
+#hp-btn {
+  margin: 1em 0;
+}
+
+#r-btn {
+  /* display: block; */
+  width: 10em;
+}
+
+/* Form stylings are here */
+label {
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.4em;
+}
+
+input {
+  padding: 1.5em 7em;
+  border-radius: 6em;
+  margin: 0.2em 0 1.6em;
+  opacity: 0.6;
+  /* border: 2px outset; */
+}
+
+input::placeholder {
+  text-align: center;
+  font-family: centaur;
+  font-size: 1.45em;
+  /* width: 15em; */
+  box-sizing: border-box;
+}
+
+input:focus {
+  background-color: rgb(255, 255, 255);
+  opacity: 0.8;
+}
+
+#fd-ta {
+  padding-bottom: 5em;
+  border-radius: 3em;
+  text-align: center;
+}
+
+.select {
+  padding: 1.5em 6em;
+  border-radius: 6em;
+  border: 2px outset gray;
+  margin: 0.2em 0 1.6em;
+  text-align: center;
+  display: inline;
+  opacity: 0.6;
+}
+
+option {
+  text-align: center;
+  justify-items: center;
+  font-family: centaur;
+  font-size: 1.5em;
+}
+
+.wrap {
+  border: 2px solid black;
+  border-radius: 3em;
+  background-color: rgb(255, 255, 255, 0.8);
+  padding: 2em 7% 3em;
+  display: inline-block;
+}
+
+/* .wrap::after {
+  content: "";
+  background-color: white;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  opacity: 0.3;
+} */
+
+/* Footer stylings are here */
+.btm {
+  background-color: var(--main-color);
+  display: block;
+  margin-top: 3em;
+  padding: 0.4em 4em;
+  text-align: right;
+  color: white;
+  font-size: 1.2em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

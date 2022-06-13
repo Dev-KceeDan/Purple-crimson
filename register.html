@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="flex-container">
+        <span class="n-span"> Registration page</span>
+        <ul>
+          <li><a href="./index.html"> About</a></li>
+          <li><a href="./login.html"> Login </a></li>
+          <li><a href="./contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="c-main">
+      <form action="" class="form" id="r-form">
+        <label for="first name">First Name:</label>
+        <input
+          type="text"
+          name="f-name"
+          id=""
+          maxlength="20"
+          placeholder="Enter firstname here"
+          class="form-data"
+          required
+        />
+        <br />
+
+        <label for="last name">Last Name:</label>
+        <input
+          type="text"
+          name="l-name"
+          id=""
+          maxlength="20"
+          placeholder="Enter last name here"
+          class="form-data"
+          required
+        />
+        <br />
+
+        <label for="phone"> Phone No.: </label>
+        <input
+          type="number"
+          name="phone-no"
+          id=""
+          maxlength="20"
+          placeholder="+234-801-234-5678"
+          class="form-data"
+          required
+        />
+        <br />
+
+        <label for="gender">Gender:</label>
+
+        <select name="gender-dropdown" class="select" id="r-gen" required>
+          <option value="">--Please choose your gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <br />
+
+        <label for="country">Country:</label>
+        <input
+          type="text"
+          name="country"
+          id=""
+          placeholder="Enter country name here"
+          class="form-data"
+          required
+          size="22em"
+        />
+        <br />
+
+        <label for="state">State:</label>
+        <input
+          type="text"
+          name="state"
+          id=""
+          placeholder="Enter name of state here"
+          class="form-data"
+          required
+          size="22em"
+        />
+        <br />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id=""
+          placeholder="Enter email address here"
+          class="form-data"
+          required
+          size="21em"
+        />
+        <br />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          name="f-name"
+          id=""
+          maxlength="30"
+          placeholder="Enter password here"
+          class="form-data"
+          required
+          size="21em"
+        />
+        <br />
+
+        <label for="c-password">Confirm Password:</label>
+        <input
+          type="password"
+          name="password"
+          id=""
+          maxlength="30"
+          placeholder="Confirm password"
+          class="form-data"
+          required
+        />
+
+        <br />
+        <br />
+
+        <button type="submit" class="btn" id="r-btn">Submit</button>
+      </form>
+    </main>
+
+    <footer class="btm">Created by Wellington C. G. D.</footer>
+  </body>
+</html>
